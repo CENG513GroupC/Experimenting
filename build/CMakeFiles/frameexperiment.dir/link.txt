@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/frameexperiment.dir/src/frameexperimenting.c.o CMakeFiles/frameexperiment.dir/src/config.c.o CMakeFiles/frameexperiment.dir/src/transceive.c.o CMakeFiles/frameexperiment.dir/src/utils.c.o  -o frameexperiment  -L/usr/local/lib  -L/opt/local/lib -Wl,-rpath,/usr/local/lib:/opt/local/lib -lbladeRF -lm -lc -lliquid -lfec -ltuntap 
