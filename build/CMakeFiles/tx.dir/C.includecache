@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -44,19 +44,19 @@ libbladeRF.h
 liquid/liquid.h
 -
 
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/config.c
+/home/saim/Downloads/final_software_stack_GroupC/src/config.c
 config.h
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/config.h
+/home/saim/Downloads/final_software_stack_GroupC/src/config.h
 
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/ofdm_tx.c
+/home/saim/Downloads/final_software_stack_GroupC/src/ofdm_tx.c
 config.h
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/config.h
+/home/saim/Downloads/final_software_stack_GroupC/src/config.h
 utils.h
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/utils.h
+/home/saim/Downloads/final_software_stack_GroupC/src/utils.h
 libbladeRF.h
 -
 transceive.h
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/transceive.h
+/home/saim/Downloads/final_software_stack_GroupC/src/transceive.h
 netinet/in.h
 -
 errno.h
@@ -130,15 +130,15 @@ stdio.h
 string.h
 -
 tuntap.h
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/tuntap.h
+/home/saim/Downloads/final_software_stack_GroupC/src/tuntap.h
 
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/transceive.c
+/home/saim/Downloads/final_software_stack_GroupC/src/transceive.c
 transceive.h
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/transceive.h
+/home/saim/Downloads/final_software_stack_GroupC/src/transceive.h
 
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/utils.c
+/home/saim/Downloads/final_software_stack_GroupC/src/utils.c
 utils.h
-/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/utils.h
+/home/saim/Downloads/final_software_stack_GroupC/src/utils.h
 
 /usr/local/include/bladeRF1.h
 

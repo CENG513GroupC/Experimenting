@@ -127,10 +127,15 @@ int main(int argc, char *argv[])
     unsigned char header[8];                // header
     unsigned char payload[payload_len];     // payload
     unsigned char p[M];         // subcarrier allocation (null/pilot/data)
+	//Noise params...
+    float SNRdB = 20.0f;                        // signal-to-noise ratio [dB]
 
 
-
-
+ // channel parameters
+    float nstd = powf(10.0f, -SNRdB/20.0f); // noise standard deviation
+    
+    
+    
     modulation_scheme ms = LIQUID_MODEM_QAM4;   // payload modulation scheme
     fec_scheme fec0  = LIQUID_FEC_NONE;         // inner FEC scheme
     fec_scheme fec1  = LIQUID_FEC_SECDED2216;   // outer FEC scheme
@@ -176,6 +181,14 @@ int main(int argc, char *argv[])
     		lastpos = 0;
     		while (!frame_complete) {
             	frame_complete = ofdmflexframegen_write(fg, buffer, symbol_len);
+            
+             for (int i=0; i<symbol_len; i++) {
+            
+            cawgn(&buffer[i], nstd);            // add noise
+        }
+
+            
+            
             	//Each data retrieved data is written to a complex array for bladeRF to send....
             	memcpy(&y[lastpos], buffer, symbol_len*sizeof(float complex));
             	lastpos = lastpos + symbol_len;

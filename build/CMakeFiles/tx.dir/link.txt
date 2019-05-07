@@ -1,1 +1,1 @@
-/usr/bin/cc   -rdynamic CMakeFiles/tx.dir/src/ofdm_tx.c.o CMakeFiles/tx.dir/src/config.c.o CMakeFiles/tx.dir/src/transceive.c.o CMakeFiles/tx.dir/src/utils.c.o  -o tx  -L/usr/local/lib  -L/opt/local/lib -Wl,-rpath,/usr/local/lib:/opt/local/lib -lbladeRF -lm -lc -lliquid -lfec -ltuntap 
+/usr/bin/cc     CMakeFiles/tx.dir/src/ofdm_tx.c.o CMakeFiles/tx.dir/src/config.c.o CMakeFiles/tx.dir/src/transceive.c.o CMakeFiles/tx.dir/src/utils.c.o  -o tx  -L/usr/local/lib  -L/opt/local/lib -rdynamic -lbladeRF -lm -lc -lliquid -lfec -ltuntap -Wl,-rpath,/usr/local/lib:/opt/local/lib 

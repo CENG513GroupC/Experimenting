@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/config.c" "/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/build/CMakeFiles/ofdm.dir/src/config.c.o"
-  "/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/ofdm.c" "/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/build/CMakeFiles/ofdm.dir/src/ofdm.c.o"
-  "/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/transceive.c" "/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/build/CMakeFiles/ofdm.dir/src/transceive.c.o"
-  "/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/src/utils.c" "/home/cancam/workspace/ceng513-project/final_software_stack_GroupC/build/CMakeFiles/ofdm.dir/src/utils.c.o"
+  "/home/saim/Downloads/final_software_stack_GroupC/src/config.c" "/home/saim/Downloads/final_software_stack_GroupC/build/CMakeFiles/ofdm.dir/src/config.c.o"
+  "/home/saim/Downloads/final_software_stack_GroupC/src/ofdm.c" "/home/saim/Downloads/final_software_stack_GroupC/build/CMakeFiles/ofdm.dir/src/ofdm.c.o"
+  "/home/saim/Downloads/final_software_stack_GroupC/src/transceive.c" "/home/saim/Downloads/final_software_stack_GroupC/build/CMakeFiles/ofdm.dir/src/transceive.c.o"
+  "/home/saim/Downloads/final_software_stack_GroupC/src/utils.c" "/home/saim/Downloads/final_software_stack_GroupC/build/CMakeFiles/ofdm.dir/src/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
