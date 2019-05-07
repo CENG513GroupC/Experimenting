@@ -48,8 +48,14 @@ unsigned int samples_len;
 int16_t *tx_samples;
 struct bladerf *devtx;
 
+#define TRUE 1
+#define FALSE 0
+
+
 int main(int argc, char *argv[])
 {
+	bool noise_active = TRUE;	
+	
     int status;
     struct module_config config_tx;
     struct bladerf_devinfo dev_info;
@@ -114,9 +120,9 @@ int main(int argc, char *argv[])
 
      // options
     unsigned int M           = 64;          // number of subcarriers
-    unsigned int cp_len      = 16;          // cyclic prefix length
+    unsigned int cp_len      = 32;          // cyclic prefix length
     unsigned int taper_len   = 4;           // taper length
-    unsigned int payload_len = 100;         // length of payload (bytes)
+    unsigned int payload_len = 128;         // length of payload (bytes)
     unsigned int frame_sample_len =0;
 
     unsigned int counters =0;
@@ -132,7 +138,7 @@ int main(int argc, char *argv[])
 
 
  // channel parameters
-    float nstd = powf(10.0f, -SNRdB/20.0f); // noise standard deviation
+    float nstd = 0.2;//powf(10.0f, -SNRdB/20.0f); // noise standard deviation
     
     
     
@@ -167,7 +173,7 @@ int main(int argc, char *argv[])
     //for (i=0; i<payload_len; i++) payload[i] = rand() & 0xff;
 
 
-    while(status == 0 && counters < 1001 )
+    while(status == 0 && counters < 101 )
     {
     		cnt ++;
 
@@ -182,11 +188,15 @@ int main(int argc, char *argv[])
     		while (!frame_complete) {
             	frame_complete = ofdmflexframegen_write(fg, buffer, symbol_len);
             
+            
+            
+            if(noise_active == TRUE)
+            {
              for (int i=0; i<symbol_len; i++) {
             
             cawgn(&buffer[i], nstd);            // add noise
-        }
-
+			}
+			}
             
             
             	//Each data retrieved data is written to a complex array for bladeRF to send....
